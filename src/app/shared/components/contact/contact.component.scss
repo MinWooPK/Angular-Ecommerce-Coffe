@@ -1,0 +1,50 @@
+.contact {
+  background-color: #e3ded7;
+  padding: 0 40px;
+  display: flex;
+}
+.contact-flex {
+  display: flex;
+  gap: 2px;
+  margin-top: 28px;
+}
+.title-contact {
+  margin-bottom: 12px;
+}
+.contact-content {
+  margin: 24px 0;
+}
+.content-adress {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.contact-adress-flex {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+p {
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 400;
+}
+.contact-detail {
+  display: flex;
+  flex-direction: column;
+  padding: 116px 24px 116px 0;
+  gap: 32px;
+  width: 55%;
+}
+.SeeAll {
+  text-decoration: underline;
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.contact-form {
+  background-color: #fff;
+  padding: 32px 32px 48px;
+  width: 50%;
+}

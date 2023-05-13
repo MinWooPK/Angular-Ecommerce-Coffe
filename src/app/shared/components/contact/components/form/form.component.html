@@ -1,0 +1,84 @@
+<div>
+  <form [formGroup]="formUser" (ngSubmit)="process()" class="form-wrap">
+    <div class="form-section">
+      <label>Nombre Completo</label>
+      <input type="text" formControlName="name" />
+      <span [hidden]="name.valid || name.pristine"
+        >El nombre es obligatorio</span
+      >
+    </div>
+    <div class="form-section">
+      <label class="form-label">Email</label>
+      <input type="email" formControlName="email" />
+      <span
+        *ngIf="email?.errors?.['required']"
+        [hidden]="email.valid || email.pristine"
+      >
+        El email es obligatorio
+      </span>
+      <span *ngIf="email?.errors?.['email']"> el email debe ser valido </span>
+    </div>
+    <div class="form-section">
+      <label for="phone">Teléfono</label>
+      <div>
+        <label class="form-select">
+          <select
+            class="form-select-country"
+            formControlName="countryCode"
+            (change)="updatePhoneValue()"
+            [(ngModel)]="selectedCountryCode"
+          >
+            <option *ngFor="let country of countries" [value]="country.code">
+              {{ country.code }}
+            </option>
+          </select>
+        </label>
+        <label>
+          <input
+            class="form-phone"
+            type="tel"
+            name="phone"
+            [ngModel]="phoneValue"
+            (ngModelChange)="phoneValue = $event"
+            formControlName="phone"
+          />
+        </label>
+        <div [hidden]="phone.valid || phone.pristine">
+          <span *ngIf="phone.errors?.['required']">
+            El teléfono es obligatorio
+          </span>
+          <span *ngIf="phone.errors?.['pattern']">
+            Ingrese un número de teléfono válido
+          </span>
+        </div>
+      </div>
+    </div>
+    <textarea
+      class="form-text"
+      placeholder="¿En qué podemos ayudarte?"
+    ></textarea>
+    <div class="form-condition">
+      <input
+        type="checkbox"
+        formControlName="acceptConditions"
+        class="checkbox"
+      />
+      <div>
+        Acepto la
+        <a routerLink="privacy_policy" class="link"> Pólitica de Privacidad</a>
+        y los
+        <a routerLink="terms&conditions" class="link"> Términos y condiciones</a
+        >.
+        <span [hidden]="acceptConditions.valid || acceptConditions.pristine">
+          Debe aceptar las condiciones para continuar
+        </span>
+      </div>
+    </div>
+    <button
+      [disabled]="formUser.invalid || !formUser.value.acceptConditions"
+      class="submit-form"
+    >
+      Enviar
+    </button>
+  </form>
+</div>

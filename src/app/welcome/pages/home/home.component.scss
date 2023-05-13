@@ -80,3 +80,18 @@
   font-weight: 500;
   color: #2a5b45;
 }
+
+.shop-home {
+  padding: 45px 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 155px;
+}
+
+.shop-home-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 20px;
+}

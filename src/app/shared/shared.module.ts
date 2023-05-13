@@ -7,6 +7,8 @@ import { RouterModule } from '@angular/router';
 import { ExplainComponent } from './components/explain/explain.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { FaqComponent } from './components/faq/faq.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { FormModule } from './components/contact/components/form/form.module';
 
 @NgModule({
   declarations: [
@@ -16,8 +18,9 @@ import { FaqComponent } from './components/faq/faq.component';
     ExplainComponent,
     CardsComponent,
     FaqComponent,
+    ContactComponent,
   ],
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, FormModule],
   exports: [
     NavigationComponent,
     FooterComponent,
@@ -25,6 +28,7 @@ import { FaqComponent } from './components/faq/faq.component';
     ExplainComponent,
     CardsComponent,
     FaqComponent,
+    ContactComponent,
   ],
 })
 export class SharedModule {}

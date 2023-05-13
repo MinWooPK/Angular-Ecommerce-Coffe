@@ -33,6 +33,20 @@ const routes: Routes = [
     path: 'shop',
     loadChildren: () => import('./shop/shop.module').then((m) => m.ShopModule),
   },
+  {
+    path: 'privacy_policy',
+    loadChildren: () =>
+      import('./privacy-policy/privacy-policy.module').then(
+        (m) => m.PrivacyPolicyModule
+      ),
+  },
+  {
+    path: 'terms&conditions',
+    loadChildren: () =>
+      import('./terms-conditions/terms-conditions.module').then(
+        (m) => m.TermsConditionsModule
+      ),
+  },
 ];
 
 @NgModule({
