@@ -1,0 +1,26 @@
+<div class="navigation">
+  <a routerLink="" class="home">
+    <img src="../../../../assets/cafedealtura.com.svg" alt="" />
+    <img src="../../../../assets/Coffee.svg" alt="" />
+  </a>
+  <div class="navigation-router">
+    <a routerLink="/shop" routerLinkActive="active">Shop</a>
+    <a routerLink="/contact" routerLinkActive="active">Contact</a>
+    <a routerLink="/about" routerLinkActive="active">About</a>
+    <a routerLink="/suscription" routerLinkActive="active">Suscripción</a>
+    <a routerLink="/enterprise" routerLinkActive="active">Empresas</a>
+  </div>
+  <div class="phone-loging-navigation">
+    <div class="phone-navigation">
+      <img src="../../../../assets/Phone.svg" alt="" />
+      <a href="tel:+32 929 49 05 18">+32 929 49 05 18</a>
+    </div>
+    <button class="btn-session">iniciar sesión</button>
+  </div>
+  <div class="cart">
+    <img src="../../../../assets/Bag.svg" alt="" />
+    <span *ngIf="cartItems.length > 0" class="ammount-cart">{{
+      cartItems.length
+    }}</span>
+  </div>
+</div>

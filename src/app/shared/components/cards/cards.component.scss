@@ -1,0 +1,51 @@
+.Card-Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e3ded7;
+  padding: 24px;
+  border-radius: 8px;
+  :hover {
+    background-color: #f7f5f3;
+  }
+}
+.Card-Container:hover {
+  background-color: #f7f5f3;
+}
+
+.cards-home {
+  display: flex;
+  gap: 24px;
+}
+.cards-shop {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.title-coffee {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 24px 0 12px;
+}
+
+.price-coffee {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.button-coffee {
+  padding: 6px 8px;
+  border-radius: 4px;
+  background-color: #2a5b45;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.Card-Container:hover .button-coffee {
+  background-color: rgba(42, 91, 69, 0.7);
+}

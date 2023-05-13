@@ -1,0 +1,67 @@
+.navigation {
+  background-color: #2b2a2b;
+  display: flex;
+  padding: 12px 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation-router {
+  display: flex;
+  gap: 32px;
+}
+
+.home {
+  display: flex;
+  gap: 7px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.btn-session {
+  background-color: #515051;
+  padding: 12px 24px;
+  border-radius: 4px;
+  border: 0;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.phone-loging-navigation {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.phone-navigation {
+  display: flex;
+  gap: 11px;
+}
+.active {
+  background-color: rgb(247, 245, 243, 0.1);
+  border-radius: 10px;
+}
+
+a {
+  padding: 8px;
+  color: #fff;
+  text-decoration: none;
+}
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.ammount-cart {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 200px;
+  background-color: rgba(247, 245, 243, 0.1);
+  font-size: 12px;
+  font-weight: 400;
+  width: 24px;
+  height: 24px;
+}

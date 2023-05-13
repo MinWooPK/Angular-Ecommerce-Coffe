@@ -1,0 +1,17 @@
+<div *ngIf="view === 'home'" class="cards-home">
+  <div *ngFor="let Card of Cards.slice(0, 4)" class="Card-Container">
+    <img src="{{ Card.img }}" alt="" />
+    <h3 class="title-coffee">{{ Card.name }}</h3>
+    <p class="price-coffee">{{ Card.price }},00 €</p>
+    <button class="button-coffee" (click)="addToCart(Card)">Añadir</button>
+  </div>
+</div>
+
+<div *ngIf="view === 'shop'" class="cards-shop">
+  <div *ngFor="let Card of Cards" class="Card-Container">
+    <img src="{{ Card.img }}" alt="" />
+    <h3 class="title-coffee">{{ Card.name }}</h3>
+    <p class="price-coffee">{{ Card.price }},00 €</p>
+    <button class="button-coffee" (click)="addToCart(Card)">Añadir</button>
+  </div>
+</div>

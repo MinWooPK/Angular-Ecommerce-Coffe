@@ -1,0 +1,27 @@
+<div class="faq-section">
+  <h2 class="title-h2">Preguntas frecuentes</h2>
+  <div class="faq-wrap">
+    <div class="faq-container" *ngFor="let faq of faqs; let i = index">
+      <div class="title-faq">
+        <h3>{{ faq.title }}</h3>
+
+        <div (click)="toggleFaq(i)">
+          <img
+            [ngClass]="{ rotated: isRotated[i], unrotated: !isRotated[i] }"
+            src="../../../../assets/chevron-up.svg"
+          />
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <div class="faq-definition" [ngClass]="{ active: isOpen[i] }">
+        <p>
+          <small>{{ faq.detail }}</small>
+        </p>
+      </div>
+    </div>
+  </div>
+  <a routerLink="about" class="faq-about-us">
+    Resolvemos tus dudas <img src="../../../../assets/Arrow-right-white.svg"
+  /></a>
+</div>

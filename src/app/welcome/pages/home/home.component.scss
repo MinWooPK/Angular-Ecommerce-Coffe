@@ -1,0 +1,82 @@
+.introduction {
+  display: flex;
+  padding: 48px 40px;
+  gap: 24px;
+  justify-content: space-between;
+}
+
+.introduction-container {
+  margin-top: 127px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  color: #2a5b45;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.definition {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.buttons-section {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-black {
+  background-color: #1f1815;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.btn-green {
+  border-radius: 4px;
+  padding: 12px 24px;
+  background-color: #2a5b45;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.title-h2 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #2a5b45;
+}
+.cards-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  gap: 24px;
+}
+
+.cards-container {
+  display: flex;
+}
+
+.SeeAll {
+  text-decoration: underline;
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  gap: 19px;
+  align-items: center;
+}
+.title-h2 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #2a5b45;
+}

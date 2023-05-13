@@ -1,0 +1,14 @@
+<div class="container">
+  <h2 class="title-definition">Café con las mejores condiciones</h2>
+  <div class="sub-container">
+    <div class="information" *ngFor="let Detail of Info; let i = index">
+      <div class="img-container-detail">
+        <img src="{{ Detail.img }}" alt="" />
+      </div>
+      <h2 class="title-card-info">{{ Detail.title }}</h2>
+      <p class="definition-card-info">
+        {{ Detail.subtitle }}
+      </p>
+    </div>
+  </div>
+</div>
