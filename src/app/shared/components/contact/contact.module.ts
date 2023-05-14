@@ -4,7 +4,7 @@ import { ContactComponent } from './contact.component';
 import { FormModule } from './components/form/form.module';
 
 @NgModule({
-  declarations: [ContactComponent],
+  declarations: [],
   imports: [CommonModule, FormModule],
 })
 export class ContactModule {}

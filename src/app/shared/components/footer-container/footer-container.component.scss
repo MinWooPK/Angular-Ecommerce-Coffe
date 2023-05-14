@@ -9,3 +9,39 @@
   font-size: 24px;
   font-weight: 400;
 }
+.footer-container-wrap {
+  margin-top: 16px;
+  display: flex;
+}
+.title-footer-container {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.footer-container-rout {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.click-footer-container {
+  background-color: #515051;
+  padding: 12px 24px;
+  border-radius: 4px;
+  max-width: fit-content;
+}
+.middle {
+  padding: 0 10vw 0 27vw;
+}
+
+a {
+  font-size: 14px;
+  line-height: 16px;
+}
+.active {
+  background-color: rgb(247, 245, 243, 0.1);
+  border-radius: 10px;
+  width: fit-content;
+  padding: 4px;
+}

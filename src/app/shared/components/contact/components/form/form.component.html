@@ -76,7 +76,9 @@
     </div>
     <button
       [disabled]="formUser.invalid || !formUser.value.acceptConditions"
-      class="submit-form"
+      [ngClass]="{
+        'submit-form': !(formUser.invalid || !formUser.value.acceptConditions)
+      }"
     >
       Enviar
     </button>
