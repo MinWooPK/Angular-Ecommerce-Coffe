@@ -9,10 +9,16 @@ import { Card } from 'src/app/interface';
 })
 export class NavigationComponent {
   public cartItems: Card[] = [];
+  totalQuantity = 0;
 
   constructor(private cartService: ShoppingCartService) {}
 
   ngOnInit() {
     this.cartItems = this.cartService.getCartItems();
+    this.cartService
+      .getTotalQuantityObservable()
+      .subscribe((totalQuantity: number) => {
+        this.totalQuantity = totalQuantity;
+      });
   }
 }

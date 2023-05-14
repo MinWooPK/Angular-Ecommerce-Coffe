@@ -1,0 +1,122 @@
+<app-navigation></app-navigation>
+<section class="cart-section">
+  <div class="title-cart">
+    <h2>Cesata ({{ totalQuantity }})</h2>
+  </div>
+  <div class="cart-container">
+    <div class="product-table">
+      <div class="product-custom">
+        <h3>productos</h3>
+        <div *ngIf="cartItems.length === 0">
+          <div class="product-detail empty">
+            <p>No items in cart</p>
+          </div>
+        </div>
+
+        <div *ngIf="cartItems.length >= 0">
+          <div *ngFor="let item of cartItems" class="product-info">
+            <div class="product-detail">
+              <div class="quantity-selector">
+                <div (click)="removeFromCart(item)" class="selector">
+                  <img src="../../../../assets/-.svg" />
+                </div>
+                <div class="quantity">{{ item.quantity }}</div>
+                <div class="selector">
+                  <img
+                    src="../../../../assets/+.svg"
+                    (click)="addCart(item)"
+                    class="img-product"
+                  />
+                </div>
+              </div>
+              <img [src]="item.img" alt="{{ item.name }}" />
+              <div>
+                <h4>{{ item.name }}</h4>
+                <p>Paquete de café, 250 gr</p>
+              </div>
+            </div>
+
+            <p class="price">{{ item.price }},00 €</p>
+          </div>
+        </div>
+
+        <div>
+          <h3>sleleccionar envio</h3>
+          <div class="shipping-container">
+            <div class="shippingOption">
+              <div class="shippingDetail">
+                <label for="myCheckbox">
+                  <input
+                    type="checkbox"
+                    id="myCheckbox"
+                    name="shippingOption"
+                    value="normal"
+                    [checked]="selectedOption === 'normal'"
+                    (change)="updateShippingOption(true)"
+                  />
+                  <span class="checkmark"></span>
+                </label>
+
+                <div>
+                  <h4>Envio 5-7 días</h4>
+                  <p>Opción enstandar sin seguimiento</p>
+                </div>
+              </div>
+
+              <h3>Gratis</h3>
+            </div>
+            <div class="shippingOption">
+              <div class="shippingDetail">
+                <label for="myUrgentCheckbox">
+                  <input
+                    type="checkbox"
+                    id="myUrgentCheckbox"
+                    name="shippingOption"
+                    value="normal"
+                    [checked]="selectedOption === 'urgente'"
+                    (change)="updateShippingOption(false)"
+                  />
+                  <span class="checkmark"></span>
+                </label>
+                <div>
+                  <h4>Envio 5-7 días</h4>
+                  <p>Opción enstandar sin seguimiento</p>
+                </div>
+              </div>
+
+              <h3>9,00 €</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="summary">
+      <div>
+        <h3>Total del carrito</h3>
+      </div>
+      <div class="divider"></div>
+      <div class="detail-summary">
+        <p>SUBTOTAL</p>
+        <h4>{{ subtotalPrice }},00 €</h4>
+      </div>
+      <div class="detail-summary">
+        <p>ENVIO</p>
+        <h4>{{ isNormalShipping ? "Gratis" : "9,00 €" }}</h4>
+      </div>
+      <div class="divider"></div>
+
+      <div class="detail-total">
+        TOTAL
+        <div class="total-tax">
+          <h4>{{ totalPrice }},00 €</h4>
+          <p class="tax">Incluye 3,78€ de IVA</p>
+        </div>
+      </div>
+      <div class="button-container">
+        <a routerLink="/contact" class="check">Ir a checkout</a>
+        <a routerLink="/shop" class="shop">Seguir comprando</a>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>
