@@ -22,7 +22,7 @@ export class ShoppingCartService {
   removeFromCart(card: Card) {
     const index = this.cartItems.findIndex((x) => x.id === card.id);
     if (index > -1) {
-      if (this.cartItems[index].quantity > 0) {
+      if (this.cartItems[index].quantity > 1) {
         this.cartItems[index].quantity--;
       } else {
         this.cartItems.splice(index, 1);
