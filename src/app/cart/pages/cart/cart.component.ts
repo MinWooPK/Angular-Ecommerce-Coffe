@@ -11,18 +11,18 @@ export class CartComponent implements OnInit {
   cartItems: Card[] = [];
   totalQuantity = 0;
   totalPrice = 0;
-  selectedOption: string = 'normal';
-  isNormalShipping: boolean = true;
+  selectedOption = 'normal';
+  isNormalShipping = true;
   subtotalPrice = 0;
 
   constructor(private cartService: ShoppingCartService) {}
 
   ngOnInit() {
-    this.selectedOption = 'normal';
     this.subtotalPrice = this.cartService.getSubtotalPrice(
       this.isNormalShipping
     );
     this.totalPrice = this.cartService.getTotalPrice(this.isNormalShipping);
+
     this.cartItems = this.cartService.getCartItems();
     this.totalQuantity = this.cartService.getTotalQuantity();
   }
@@ -49,8 +49,8 @@ export class CartComponent implements OnInit {
         normalCheckbox.checked = false;
       }
     }
-    console.log(this.selectedOption);
 
+    // update subtotal and total prices
     this.subtotalPrice = this.cartService.getSubtotalPrice(
       this.isNormalShipping
     );
@@ -61,11 +61,23 @@ export class CartComponent implements OnInit {
     this.cartService.removeFromCart(card);
     this.cartItems = this.cartService.getCartItems();
     this.totalQuantity = this.cartService.getTotalQuantity();
+
+    // update subtotal and total prices
+    this.subtotalPrice = this.cartService.getSubtotalPrice(
+      this.isNormalShipping
+    );
+    this.totalPrice = this.cartService.getTotalPrice(this.isNormalShipping);
   }
 
   addCart(card: Card) {
     this.cartService.addToCart(card);
     this.cartItems = this.cartService.getCartItems();
     this.totalQuantity = this.cartService.getTotalQuantity();
+
+    // update subtotal and total prices
+    this.subtotalPrice = this.cartService.getSubtotalPrice(
+      this.isNormalShipping
+    );
+    this.totalPrice = this.cartService.getTotalPrice(this.isNormalShipping);
   }
 }
