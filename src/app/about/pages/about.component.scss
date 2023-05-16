@@ -1,0 +1,67 @@
+.shop-home {
+  padding: 45px 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 155px;
+}
+
+.shop-home-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.shop-home-map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 06vw;
+}
+.map {
+  background-color: #2a5b45;
+  color: #fff;
+}
+iframe {
+  height: 425px;
+  width: 616px;
+  border-radius: 20px;
+}
+
+.shop-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+img {
+  border-radius: 20px;
+}
+
+.resu {
+  color: #7a7979;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  background-color: #2b2a2b;
+  align-items: center;
+  padding: 12px 0;
+  font-size: 14px;
+}
+
+.title-wait {
+  font-size: 28px;
+}
+.clickme {
+  cursor: pointer;
+  color: #b1afaf;
+}
+h2 {
+  font-size: 17px;
+}
+
+h1 {
+  font-size: 18px;
+}

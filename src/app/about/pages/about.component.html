@@ -1,4 +1,94 @@
 <app-navigation></app-navigation>
 
-<p>about works!</p>
-<app-footer></app-footer>
+<div class="shop-home">
+  <div class="shop-home-detail">
+    <div class="shop-text resu">
+      <h1>
+        Sucede millones de veces todas las semanas que un cliente recibe una
+        bebida de un barista de Cafe Con Altura®. Sin embargo, cada interacción
+        es única.
+      </h1>
+      <div>
+        Ocurre en tan solo un instante: una mano que salva la distancia de la
+        barra para entregar una taza a otra mano tendida. Pero establece una
+        conexión.
+      </div>
+      <div>
+        Nos aseguramos de que todo lo que hacemos esté a la altura de esa
+        conexión: desde nuestro compromiso con el café de máxima calidad del
+        mundo, hasta la manera de interactuar con nuestros clientes y
+        comunidades para operar de forma responsable.
+      </div>
+      <div>
+        Desde nuestros comienzos, en una tienda hace casi cuarenta años, en
+        todos los lugares donde hemos estado, en todos los lugares con los que
+        nos relacionamos, intentamos que todo sea un poco mejor que cuando
+        llegamos.
+      </div>
+    </div>
+    <div>
+      <img src="../../../../assets/cafe-stand.png" />
+    </div>
+  </div>
+</div>
+<div class="shop-home map">
+  <div class="shop-home-map">
+    <div>
+      <iframe
+        *ngIf="selectedMap === 'callao'"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3049.492768674727!2d-3.7041857853167045!3d40.41902937936715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42288fdd780dd1%3A0x60584e771f1e953d!2sPlaza%20de%20Callao!5e0!3m2!1sen!2sus!4v1621111111111!5m2!1sen!2sus
+"
+        frameborder="0"
+      ></iframe>
+      <iframe
+        *ngIf="selectedMap === 'granvia'"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3049.5081713567287!2d-3.7037634853167367!3d40.42019807936726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42288f983c5f11%3A0x3e284d7a7ea6d785!2sGran%20V%C3%ADa%2C%20Madrid!5e0!3m2!1sen!2ses!4v1621111111111!5m2!1sen!2ses
+"
+        frameborder="0"
+      ></iframe>
+      <iframe
+        *ngIf="selectedMap === 'genova'"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1214.512180857268!2d-3.6945727179288526!3d40.4265582813597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42288495d7dd2d%3A0x20cfe9f9e7c88144!2sCalle%20de%20G%C3%A9nova%2C%20Madrid!5e0!3m2!1sen!2ses!4v1621111111111!5m2!1sen!2ses
+"
+        frameborder="0"
+      ></iframe>
+      <iframe
+        *ngIf="selectedMap === 'palma'"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3049.504099696046!2d-3.7013750853167306!3d40.41986057936721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42288f9b2c107d%3A0xe8462a1790984a92!2sCalle%20de%20Palma%2C%20Madrid!5e0!3m2!1sen!2ses!4v1621111111111!5m2!1sen!2ses
+"
+        frameborder="0"
+      ></iframe>
+      <iframe
+        *ngIf="selectedMap === 'santaana'"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3049.509234085547!2d-3.70561878531674!3d40.41999657936723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42288f81a430eb%3A0x1ae2625dd62252bb!2sCalle%20Marqu%C3%A9s%20de%20Santa%20Ana%2C%20Madrid!5e0!3m2!1sen!2ses!4v1621111111111!5m2!1sen!2ses
+"
+        frameborder="0"
+      ></iframe>
+    </div>
+    <div class="shop-text">
+      <h1 class="title-wait">Te esperamos en ...</h1>
+      <div (click)="selectMap('callao')" class="clickme">
+        Plaza de Callao, Madrid, 28004, Madrid
+      </div>
+      <div (click)="selectMap('granvia')" class="clickme">
+        Gran Via, Madrid, 28004, Madrid
+      </div>
+      <div (click)="selectMap('genova')" class="clickme">
+        Calle Genova, Madrid, 28013, Madrid
+      </div>
+      <div (click)="selectMap('palma')" class="clickme">
+        Calle de Palma, Madrid, 28004, Madrid
+      </div>
+      <div (click)="selectMap('santaana')" class="clickme">
+        Marques de Santa Ana, Madrid, 28004, Madrid
+      </div>
+      <div>... y más proximamente !</div>
+    </div>
+  </div>
+</div>
+<app-explain></app-explain>
+
+<app-footer-container></app-footer-container>
+<div class="footer">
+  Todos los derechos reservados - Café de Altura SL - 2022
+</div>

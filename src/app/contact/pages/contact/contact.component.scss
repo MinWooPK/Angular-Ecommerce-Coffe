@@ -1,0 +1,46 @@
+.employed {
+  // background-color: red;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  gap: 30px;
+  border: 1px solid #e3ded7;
+  animation: backgroundAnimation 5s ease-in-out infinite alternate;
+}
+p {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+}
+
+.employed-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+}
+a {
+  animation: aAnimation 5s ease-in-out infinite alternate;
+}
+@keyframes backgroundAnimation {
+  0% {
+    background-color: #ffffff; /* Blanco */
+  }
+  50% {
+    background-color: #eaf2f8; /* Color intermedio */
+  }
+  100% {
+    background-color: #b3d7f9; /* Azul celeste */
+  }
+}
+@keyframes aAnimation {
+  0% {
+    color: #b3d7f9; /* Azul celeste */
+  }
+  50% {
+    color: #84c3f3; /* Color intermedio */
+  }
+  100% {
+    color: #ffffff; /* Blanco */
+  }
+}

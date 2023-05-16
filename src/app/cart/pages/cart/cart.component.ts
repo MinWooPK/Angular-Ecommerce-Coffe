@@ -48,6 +48,7 @@ export class CartComponent implements OnInit {
       if (normalCheckbox) {
         normalCheckbox.checked = false;
       }
+      this.cartService.setIsNormalShipping(this.isNormalShipping);
     }
 
     // update subtotal and total prices

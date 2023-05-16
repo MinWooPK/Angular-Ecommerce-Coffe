@@ -36,7 +36,7 @@
               </div>
             </div>
 
-            <p class="price">{{ item.price }},00 €</p>
+            <p class="price">{{ item.price * item.quantity }},00 €</p>
           </div>
         </div>
 
@@ -113,7 +113,7 @@
         </div>
       </div>
       <div class="button-container">
-        <a routerLink="/contact" class="check">Ir a checkout</a>
+        <a routerLink="/cart/checkout" class="check">Ir a checkout</a>
         <a routerLink="/shop" class="shop">Seguir comprando</a>
       </div>
     </div>

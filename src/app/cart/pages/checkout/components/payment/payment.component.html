@@ -1,0 +1,59 @@
+<div class="grid-form">
+  <div class="grid-simple">
+    <form [formGroup]="formUserCard" class="form-wrap">
+      <div class="form-section">
+        <label>Titular</label>
+        <input
+          type="text"
+          formControlName="name"
+          placeholder="Nombre del titular"
+          (input)="formatName($event)"
+        />
+        <span [hidden]="name.valid || name.pristine"
+          >El nombre es obligatorio</span
+        >
+      </div>
+      <div class="form-section">
+        <label class="form-label">Numero de tarjeta</label>
+        <input
+          type="text"
+          maxlength="19"
+          formControlName="card"
+          (input)="formatCardNumber($event)"
+          placeholder="1234 1234 1234 1234"
+        />
+        <span [hidden]="card.valid || card.pristine">
+          El número de tarjeta es obligatorio
+        </span>
+      </div>
+      <div class="grid-middle">
+        <div class="form-section">
+          <label class="form-label">Fecha de caducidad</label>
+          <input
+            type="text"
+            formControlName="date"
+            placeholder="MM/YY"
+            maxlength="5"
+            (input)="formatExpirationDate($event)"
+          />
+          <span [hidden]="date.valid || date.pristine">
+            El número de tarjeta es obligatorio
+          </span>
+        </div>
+        <div class="form-section">
+          <label class="form-label">CVC</label>
+          <input
+            type="text"
+            formControlName="cvc"
+            placeholder="123"
+            maxlength="3"
+            (input)="formatCvc($event)"
+          />
+          <span [hidden]="cvc.valid || cvc.pristine">
+            El cvc es obligatorio
+          </span>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

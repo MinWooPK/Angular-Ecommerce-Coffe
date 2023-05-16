@@ -1,0 +1,212 @@
+.title-checkout h2 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #2a5b45;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0 24px;
+}
+label {
+  height: 16px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+}
+.checkout-container {
+  padding: 0 40px 310px 48px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.checkout-table {
+  grid-column: span 2;
+}
+.summary {
+  grid-column: 3;
+}
+.summary-container {
+  padding: 24px;
+  background-color: #f7f5f3;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 222px;
+  min-width: 336px;
+}
+#cardCheckbox {
+  display: none;
+}
+#transferCheckbox {
+  display: none;
+}
+#bizumCheckbox {
+  display: none;
+}
+.checkmark {
+  display: inline-block;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  border: 1px solid #2a5b45;
+  border-radius: 50%;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #2a5b45;
+}
+
+#cardCheckbox:checked + .checkmark:after {
+  display: block;
+  animation: grow 0.2s ease-out forwards;
+}
+
+#transferCheckbox:checked + .checkmark:after {
+  display: block;
+  animation: grow 0.2s ease-out forwards;
+}
+#bizumCheckbox:checked + .checkmark:after {
+  display: block;
+  animation: grow 0.2s ease-out forwards;
+}
+@keyframes grow {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.shippingOption {
+  display: flex;
+  align-items: center;
+  padding: 24px 0;
+}
+.shippingDetail {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.shippingDetail-bizum {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.middle {
+  border-top: 1px solid #e3ded7;
+  border-width: thin;
+  border-bottom: 1px solid #e3ded7;
+}
+
+.divider {
+  height: 1px;
+  background-color: #e3ded7;
+}
+
+.detail-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.total-tax {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: end;
+}
+
+.tax {
+  font-size: 12px;
+  font-weight: 400;
+  color: #515051;
+}
+.button-container {
+  display: flex;
+  gap: 16px;
+}
+.check {
+  padding: 12px 24px;
+  border-radius: 4px;
+  background-color: #2a5b45;
+}
+.disabled {
+  opacity: 0.3;
+  padding: 12px 24px;
+  border-radius: 4px;
+  background-color: #2a5b45;
+  pointer-events: none;
+}
+
+.shop {
+  color: #2a5b45;
+  padding: 12px 24px;
+  border-radius: 4px;
+}
+
+.shippingContainer-option {
+  display: flex;
+  flex-direction: column;
+}
+
+.shipping-payment {
+  padding: 22px 40px 0;
+}
+
+.shipping-payment-form {
+  padding: 0 40px 22px;
+}
+
+.shipping-payment-form {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  height: 0;
+  overflow: hidden;
+}
+.shipping-payment-form.show {
+  opacity: 1;
+  height: auto;
+}
+.shipping-payment {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  height: 0;
+  overflow: hidden;
+}
+.shipping-payment.show {
+  opacity: 1;
+  height: auto;
+}

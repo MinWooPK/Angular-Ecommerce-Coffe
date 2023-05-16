@@ -1,0 +1,115 @@
+<div class="grid-form">
+  <div class="grid-simple">
+    <form [formGroup]="formUser" class="form-wrap">
+      <div class="form-section">
+        <label>Nombre</label>
+        <input
+          type="text"
+          formControlName="name"
+          (input)="formatName($event)"
+        />
+        <span [hidden]="name.valid || name.pristine"
+          >El nombre es obligatorio</span
+        >
+      </div>
+      <div class="form-section">
+        <label class="form-label">Apellido</label>
+        <input
+          type="text"
+          formControlName="surname"
+          (input)="formatSurname($event)"
+        /><span [hidden]="surname.valid || surname.pristine"
+          >El apellido es obligatorio</span
+        >
+      </div>
+      <div class="form-section">
+        <label class="form-label">Teléfono</label>
+        <input
+          type="text"
+          formControlName="phone"
+          (input)="formatPhone($event)"
+          placeholder="+34 600 600 600"
+        />
+        <span [hidden]="phone.pristine || phone.valid"
+          >El teléfono es obligatorio</span
+        >
+      </div>
+      <div class="form-section">
+        <label class="form-label">Email</label>
+        <input type="text" formControlName="email" />
+        <span [hidden]="email.valid || email.pristine">
+          El email es obligatorio</span
+        >
+      </div>
+      <div class="form-section">
+        <label class="form-label">País</label>
+        <select class="custom-select">
+          <option value="" hidden>Seleccionar país</option>
+          <option value="España">España</option>
+          <option value="Portugal">Portugal</option>
+          <option value="Francia">Francia</option>
+        </select>
+      </div>
+
+      <div class="grid-middle">
+        <div class="form-section">
+          <label class="form-label">Población</label>
+          <input
+            type="text"
+            formControlName="village"
+            (input)="formatVillage($event)"
+          />
+          <span [hidden]="village.valid || village.pristine">
+            Este campo es obligatorio</span
+          >
+        </div>
+        <div class="form-section">
+          <label class="form-label">CP</label>
+          <input
+            type="text"
+            formControlName="cp"
+            placeholder="123"
+            (input)="formatCP($event)"
+          />
+          <span [hidden]="cp.valid || cp.pristine">
+            Este campo es obligatorio</span
+          >
+        </div>
+      </div>
+
+      <div class="last-form">
+        <div class="form-quart-section">
+          <label class="form-label">Calle</label>
+          <input type="text" formControlName="street" />
+          <span [hidden]="street.valid || street.pristine">
+            Este campo es obligatorio</span
+          >
+        </div>
+        <div class="form-quart-section">
+          <label class="form-label">Nº</label>
+          <input type="text" formControlName="number" /><span
+            [hidden]="number.valid || number.pristine"
+          >
+            Este campo es obligatorio</span
+          >
+        </div>
+        <div class="form-quart-section">
+          <label class="form-label">Piso</label>
+          <input type="text" formControlName="flat" /><span
+            [hidden]="flat.valid || flat.pristine"
+          >
+            Este campo es obligatorio</span
+          >
+        </div>
+        <div class="form-quart-section">
+          <label class="form-label">Puerta</label>
+          <input type="text" formControlName="door" /><span
+            [hidden]="door.valid || door.pristine"
+          >
+            Este campo es obligatorio</span
+          >
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

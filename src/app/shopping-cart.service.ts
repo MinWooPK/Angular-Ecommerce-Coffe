@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Card } from './interface';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -8,6 +8,15 @@ import { BehaviorSubject } from 'rxjs';
 export class ShoppingCartService {
   cartItems: Card[] = [];
   private totalQuantitySubject = new BehaviorSubject<number>(0);
+  private isNormalShippingSubject = new BehaviorSubject<boolean>(true);
+
+  setIsNormalShipping(isNormalShipping: boolean) {
+    this.isNormalShippingSubject.next(isNormalShipping);
+  }
+
+  getIsNormalShipping(): Observable<boolean> {
+    return this.isNormalShippingSubject.asObservable();
+  }
 
   addToCart(card: Card) {
     const index = this.cartItems.findIndex((x) => x.id === card.id);

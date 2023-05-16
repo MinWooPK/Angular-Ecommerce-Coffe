@@ -1,1 +1,143 @@
-<p>checkout works!</p>
+<app-navigation></app-navigation>
+<section>
+  <div class="title-checkout">
+    <h2>Checkout</h2>
+  </div>
+
+  <div class="checkout-container">
+    <div class="checkout-table">
+      <h3>Seleccionar método de pago</h3>
+      <div class="shipping-container">
+        <div class="shippingOption">
+          <div class="shippingDetail">
+            <label for="cardCheckbox">
+              <input
+                type="radio"
+                id="cardCheckbox"
+                name="shippingOption"
+                value="normal"
+                [(ngModel)]="selectedOption"
+              />
+
+              <span class="checkmark"></span>
+            </label>
+
+            <div>
+              <h4>Tarjeta débito</h4>
+              <p>Opción estándar sin seguimiento</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="shipping-payment-form"
+          [ngClass]="{ show: selectedOption === 'normal' }"
+        >
+          <app-payment #paymentComponent></app-payment>
+        </div>
+        <div class="shippingOption middle">
+          <div class="shippingContainer-option">
+            <div class="shippingDetail">
+              <label for="transferCheckbox">
+                <input
+                  type="radio"
+                  id="transferCheckbox"
+                  name="shippingOption"
+                  value="transfer"
+                  [(ngModel)]="selectedOption"
+                />
+
+                <span class="checkmark"></span>
+              </label>
+              <div>
+                <h4>
+                  Transferencia bancaria a la cuenta ES12 1234 1234 1234567890
+                </h4>
+                <p>
+                  Será necesario recibir el comprobante de la transferencia para
+                  preparar tu pedido
+                </p>
+              </div>
+            </div>
+            <div
+              class="shipping-payment"
+              [ngClass]="{ show: selectedOption === 'transfer' }"
+            >
+              <p>Enviar recibo al +34 603 18 44 ...</p>
+            </div>
+          </div>
+        </div>
+        <div class="shippingOption">
+          <div class="shippingContainer-option">
+            <div class="shippingDetail">
+              <label for="bizumCheckbox">
+                <input
+                  type="radio"
+                  id="bizumCheckbox"
+                  name="shippingOption"
+                  value="bizum"
+                  [(ngModel)]="selectedOption"
+                />
+
+                <span class="checkmark"></span>
+              </label>
+              <div class="shippingDetail-bizum">
+                <h4>Bizum</h4>
+                <img src="../../../../assets/Bizum.svg" alt="" />
+              </div>
+            </div>
+            <div
+              class="shipping-payment"
+              [ngClass]="{ show: selectedOption === 'bizum' }"
+            >
+              <p>Enviar transferencia al +34 603 18 44 ...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="checkout-table">
+        <h3>Dirección de envío</h3>
+      </div>
+      <app-direction #directionComponent></app-direction>
+    </div>
+    <div class="summary">
+      <div class="summary-container">
+        <h3>Total del carrito</h3>
+        <div class="divider"></div>
+        <div class="detail-summary">
+          <p>SUBTOTAL</p>
+          <h4>{{ subtotalPrice }},00 €</h4>
+        </div>
+        <div class="detail-summary">
+          <p>ENVIO</p>
+          <h4>{{ isNormalShipping ? "Gratis" : "9,00 €" }}</h4>
+        </div>
+        <div class="divider"></div>
+
+        <div class="detail-total">
+          TOTAL
+          <div class="total-tax">
+            <h4>{{ totalPrice }},00 €</h4>
+            <p class="tax">Incluye 3,78€ de IVA</p>
+          </div>
+        </div>
+        <div class="button-container">
+          <a
+            routerLink="/cart/success"
+            [ngClass]="{
+              check:
+                directionComponent.isFormSubmited &&
+                paymentComponent.isFormSubmitedCard,
+              disabled:
+                !directionComponent.isFormSubmited ||
+                !paymentComponent.isFormSubmitedCard
+            }"
+            >Pagar y realizar pedido</a
+          >
+        </div>
+        <button (click)="hell()"></button>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>
