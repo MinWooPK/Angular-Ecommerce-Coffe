@@ -1,5 +1,4 @@
 .employed {
-  // background-color: red;
   display: flex;
   flex-direction: column;
   padding: 40px;
@@ -17,30 +16,39 @@ p {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 20px 0;
+  padding: 60px 0;
 }
 a {
   animation: aAnimation 5s ease-in-out infinite alternate;
 }
 @keyframes backgroundAnimation {
   0% {
-    background-color: #ffffff; /* Blanco */
+    background-color: #ffffff;
   }
   50% {
-    background-color: #eaf2f8; /* Color intermedio */
+    background-color: #eaf2f8;
   }
   100% {
-    background-color: #b3d7f9; /* Azul celeste */
+    background-color: #b3d7f9;
   }
 }
 @keyframes aAnimation {
   0% {
-    color: #b3d7f9; /* Azul celeste */
+    color: #b3d7f9;
   }
   50% {
-    color: #84c3f3; /* Color intermedio */
+    color: #84c3f3;
   }
   100% {
-    color: #ffffff; /* Blanco */
+    color: #ffffff;
   }
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  background-color: #2b2a2b;
+  align-items: center;
+  padding: 12px 0;
+  font-size: 14px;
 }

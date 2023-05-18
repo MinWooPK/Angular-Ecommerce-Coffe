@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { ShoppingCartService } from 'src/app/shopping-cart.service';
 import { Card } from 'src/app/interface';
 
@@ -10,6 +10,8 @@ import { Card } from 'src/app/interface';
 export class NavigationComponent {
   public cartItems: Card[] = [];
   totalQuantity = 0;
+  isSmallScreen = false;
+  showBurgerMenu = false;
 
   constructor(private cartService: ShoppingCartService) {}
 
@@ -20,5 +22,17 @@ export class NavigationComponent {
       .subscribe((totalQuantity: number) => {
         this.totalQuantity = totalQuantity;
       });
+    this.checkScreenSize();
+  }
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.checkScreenSize();
+  }
+
+  checkScreenSize() {
+    this.isSmallScreen = window.innerWidth <= 1185;
+  }
+  toggleBurgerMenu() {
+    this.showBurgerMenu = !this.showBurgerMenu;
   }
 }

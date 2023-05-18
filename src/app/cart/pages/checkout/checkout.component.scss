@@ -33,6 +33,9 @@ p {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
+  @media (max-width: 1000px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .checkout-table {
@@ -40,6 +43,9 @@ p {
 }
 .summary {
   grid-column: 3;
+  @media (max-width: 1000px) {
+    grid-column: 1;
+  }
 }
 .summary-container {
   padding: 24px;

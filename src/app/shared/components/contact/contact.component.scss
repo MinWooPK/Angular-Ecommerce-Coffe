@@ -2,6 +2,9 @@
   background-color: #e3ded7;
   padding: 0 40px;
   display: flex;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
 }
 .contact-flex {
   display: flex;
@@ -35,6 +38,10 @@ p {
   padding: 116px 24px 116px 0;
   gap: 32px;
   width: 55%;
+  @media (max-width: 1000px) {
+    width: auto;
+    padding: 40px;
+  }
 }
 .SeeAll {
   text-decoration: underline;
@@ -47,4 +54,7 @@ p {
   background-color: #fff;
   padding: 32px 32px 48px;
   width: 50%;
+  @media (max-width: 1000px) {
+    width: auto;
+  }
 }

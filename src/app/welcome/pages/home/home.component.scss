@@ -3,6 +3,21 @@
   padding: 48px 40px;
   gap: 24px;
   justify-content: space-between;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    padding: 0 20px 40px;
+    align-items: center;
+    gap: 0;
+  }
+  @media (max-width: 1185px) {
+    padding: 70px 40px 40px;
+  }
+}
+
+img {
+  @media (max-width: 1000px) {
+    display: none;
+  }
 }
 
 .introduction-container {
@@ -10,6 +25,10 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  @media (max-width: 1185px) {
+    margin-top: 80px;
+  }
 }
 
 .title {
@@ -86,6 +105,9 @@
   display: flex;
   justify-content: space-between;
   gap: 155px;
+  @media (max-width: 1000px) {
+    gap: 0;
+  }
 }
 
 .shop-home-detail {

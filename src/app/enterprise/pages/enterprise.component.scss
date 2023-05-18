@@ -8,7 +8,19 @@
   font-size: 14px;
 }
 h1 {
-  animation: greenAnimation 6s infinite;
+  font-size: 18px;
+  font-weight: 600;
+
+  font-size: 18px;
+}
+p {
+  color: #7a7979;
+}
+.detail-enterprise {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: start;
 }
 .suscription {
   display: flex;
@@ -33,7 +45,6 @@ h1 {
   background-color: #e3ded7;
   border-radius: 20px;
   padding: 20px;
-  width: 50%;
 }
 div {
   color: #6b7280;
@@ -44,26 +55,24 @@ div {
   background-color: #e3ded7;
 }
 
-.wrap {
-  background-image: url("../../../assets/plantacion-cafe.jpeg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  display: flex;
-  flex-direction: column;
-
-  gap: 20px;
-  padding: 30px 40px;
+img {
+  @media (max-width: 750px) {
+    display: none;
+  }
 }
-@keyframes greenAnimation {
-  0% {
-    color: #2a7c5b;
+.wrap {
+  background-color: #e3ded7;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 45px 40px;
+  text-align: center;
+  @media (max-width: 1130px) {
+    padding: 85px 40px;
+    flex-direction: column;
   }
-  50% {
-    color: #39a37b;
-  }
-  100% {
-    color: #2a7c5b;
-  }
+}
+img {
+  border-radius: 20px;
+  max-height: 425px;
 }

@@ -1,5 +1,9 @@
 section {
   padding: 40px;
+  @media (max-width: 1000px) {
+    padding: 80px 10px;
+    text-align: center;
+  }
 }
 .img-detail {
   background-color: #2a5b45;
@@ -91,4 +95,16 @@ p {
   font-size: 12px;
   font-weight: 400;
   color: #515051;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+}
+
+a {
+  padding: 12px 24px;
+  background-color: #2a5b45;
+  border-radius: 4px;
 }

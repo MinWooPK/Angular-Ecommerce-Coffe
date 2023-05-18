@@ -12,9 +12,9 @@ export class FormComponent {
 
   countries = [
     { code: 'ES', pre: '+34' },
-    { code: 'FR', pre: '+343' },
-    { code: 'IT', pre: '+341' },
-    { code: 'US', pre: '+342' },
+    { code: 'FR', pre: '+33' },
+    { code: 'IT', pre: '+39' },
+    { code: 'UK', pre: '+44' },
   ];
   constructor(private fb: FormBuilder) {}
   get name() {

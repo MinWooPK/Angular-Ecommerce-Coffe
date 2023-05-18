@@ -33,8 +33,4 @@ export class CheckoutComponent implements OnInit {
       this.totalPrice = this.cartService.getTotalPrice(this.isNormalShipping);
     });
   }
-  hell() {
-    console.log('1', this.paymentComponent.isFormSubmitedCard);
-    console.log('2', this.directionComponent.isFormSubmited);
-  }
 }
